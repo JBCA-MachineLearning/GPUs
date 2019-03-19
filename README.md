@@ -14,7 +14,7 @@
 
 Book time on the GPUs using the google calendar. 
 
-Use the format: *LOFAR X - NAME* , when book time slot. 
+Use the format: *LOFAR X - NAME* , when booking a day. 
 
 # Versions of cuda installed on LOFAR machines
 
