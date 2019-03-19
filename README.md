@@ -42,7 +42,7 @@ To download the container to your working directory run
 
 
 ```bash
-singularity pull --name container.simg shub://TMCantwell/FAW:cuda101 
+singularity pull --name container.simg shub://JBCA-MachineLearning/GPUs:cuda10 
 ```
 
 From your working directory run the following command
