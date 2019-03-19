@@ -120,7 +120,7 @@ On your local machine open your browser at http://localhost:1893.
 
 ### Possible Errors
 
-*You might see the following error:
+* You might see the following error:
 ```bash
 jupyter notebook permission denied: '/run/user/
 ```
