@@ -2,11 +2,11 @@
 
 **LOFAR 3:** No
 
-**LOFAR 4:** No
+**LOFAR 4:** Yes
 
 **LOFAR 5:** No
 
-**LOFAR 6:** No
+**LOFAR 6:** Yes
 
 **LOFAR 7:** Yes
 
