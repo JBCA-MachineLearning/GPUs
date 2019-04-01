@@ -55,7 +55,7 @@ This will bind your working directory to the folder /mnt in the singularity cont
 To run your python script use the following command
 
 ```bash
-singularity run container.simg /mnt/your_script.py
+singularity run --nv container.simg /mnt/your_script.py
 ```
 
 ### Possible Errors
