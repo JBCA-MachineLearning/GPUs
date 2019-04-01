@@ -106,7 +106,7 @@ This will bind your working directory to the folder /mnt in the singularity cont
 
 Next shell into the container and activate the tensorflow environment. Cd to your working directory in /mnt.
 ```bash
-singularity shell container.simg
+singularity shell --nv container.simg
 source /tensorflow/bin/activate
 cd /mnt
 ```
