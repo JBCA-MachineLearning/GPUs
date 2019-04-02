@@ -57,7 +57,7 @@ This will bind your working directory to the folder /mnt in the singularity cont
 To run your python script use the following command
 
 ```bash
-singularity run --nv container.simg /mnt/your_script.py
+singularity run --nv -H /raid/scratch/you_area container.simg /mnt/your_script.py
 ```
 
 ### Possible Errors
@@ -75,6 +75,20 @@ from keras.backend.tensorflow_backend import set_session
 config = tf.ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction = 0.8
 set_session(tf.Session(config=config))
+```
+
+If you see this error:
+
+```bash
+2019-04-02 17:29:27.818596: E tensorflow/stream_executor/cuda/cuda_driver.cc:300] failed call to cuInit: CUDA_ERROR_UNKNOWN: unknown error
+2019-04-02 17:29:27.819020: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:161] retrieving CUDA diagnostic information for host: lofar4.jb.man.ac.uk
+2019-04-02 17:29:27.819053: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:168] hostname: lofar4.jb.man.ac.uk
+2019-04-02 17:29:27.819154: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:192] libcuda reported version is: Invalid argument: expected %d.%d, %d.%d.%d, or %d.%d.%d.%d form for driver version; got "1"
+```
+Then exit the container and run
+
+```bash
+nvidia-modprobe -u -c=0
 ```
 
 # Run a jupyter notebook using Singularity container
@@ -108,7 +122,7 @@ This will bind your working directory to the folder /mnt in the singularity cont
 
 Next shell into the container and activate the tensorflow environment. Cd to your working directory in /mnt.
 ```bash
-singularity shell --nv container.simg
+singularity shell --nv -H /raid/scratch/you_area container.simg
 source /tensorflow/bin/activate
 cd /mnt
 ```
