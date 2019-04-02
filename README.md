@@ -10,6 +10,8 @@
 
 **LOFAR 7:** Yes
 
+**LOFAR 8** Yes
+
 # Booking Time
 
 Book time on the GPUs using the google calendar. 
